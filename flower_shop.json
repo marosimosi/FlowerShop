@@ -1,10 +1,10 @@
 {
     "name": "Flower Shop",
     "logged_user": {
-        "id": 2,
-        "email": "marianabparasiri@gmail.com",
-        "password": "naigeiasas",
-        "username": "marpar"
+        "id": 1,
+        "email": "a.pnevmatikaki@gmail.com",
+        "password": "1234",
+        "username": "apne"
     },
     "flowers_id_counter": 22,
     "flowers": [
@@ -440,7 +440,7 @@
             "username": "marpar"
         }
     ],
-    "orders_id_counter": 5,
+    "orders_id_counter": 6,
     "orders": [
         {
             "id": 1,
@@ -481,6 +481,14 @@
             "credit_card": "123456789010",
             "address": "esdrfghjkngfd",
             "order_date": "07/01/2020, 17:36:59"
+        },
+        {
+            "id": 6,
+            "user": 1,
+            "bouquet": 2,
+            "credit_card": "5356718001403365",
+            "address": "Apollonos 10, Porto-Rafti",
+            "order_date": "21/02/2021, 14:05:48"
         }
     ]
 }

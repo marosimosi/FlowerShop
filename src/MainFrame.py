@@ -15,8 +15,6 @@ from Order import Order
 import time
 
 
-
-
 class MainFrame(Frame):
     def __init__(self, root=None, data=None, ncols=None, nrows=None):
         Frame.__init__(self, root)
@@ -200,7 +198,7 @@ class MainFrame(Frame):
             else:
                 next_button.config(state=DISABLED)
             buy_button = Button(self.frames[j - self.start + 1], text="Buy", bg="RosyBrown2", width="10", height="1",
-                   command=lambda: self.buy_bouquet())
+                                command=lambda: self.buy_bouquet())
             buy_button.grid(row=2, column=0, columnspan=5, pady=5)
             if len(self.my_cart) == 0:
                 buy_button.config(state=DISABLED)
@@ -214,7 +212,6 @@ class MainFrame(Frame):
         self.my_cart = []
         self.total = 0
         self.home_page()
-
 
     def display_bouquet(self, bouquet, frame_index):
         Label(self.frames[frame_index], text=bouquet.name).pack()
@@ -440,8 +437,8 @@ class MainFrame(Frame):
             msg.attach(MIMEText(body, 'plain'))
             time.sleep(2)
             my_screenshot = pyautogui.screenshot()
-            my_screenshot.save('order.png')
-            filename = 'order.png'
+            filename = '../order.png'
+            my_screenshot.save(filename)
             attachment = open(filename, 'rb')
             part = MIMEBase('application', 'octet-stream')
             part.set_payload((attachment).read())
